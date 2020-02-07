@@ -1,4 +1,4 @@
-package Com.Task.Newsapp
+package Com.Task.newsApp
 
 import org.junit.Test
 
