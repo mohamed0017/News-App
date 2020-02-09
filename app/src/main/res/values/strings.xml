@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="error_msg">Error getting data</string>
+    <string name="retry">Retry</string>
+    <string name="viewtype_creation_error">ViewType not declared</string>
+    <string name="news_empty">No news found, try again …</string>
+    <string name="load_data">Load data</string>
+
 </resources>
