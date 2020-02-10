@@ -45,7 +45,22 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_text_network"/>
+        app:layout_constraintBottom_toTopOf="@+id/newsTextNetwork"/>
+
+    <Button
+        android:id="@+id/newsRetryBut"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:text="@string/retry"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/newsProgressBar"/>
 
     <ProgressBar
         android:id="@+id/newsProgressBar"

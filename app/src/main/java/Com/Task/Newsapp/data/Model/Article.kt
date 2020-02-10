@@ -1,8 +1,11 @@
-package Com.Task.newsApp.Model
+package Com.Task.newsApp.data.Model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-data class Articles(
+@Parcelize
+data class Article(
 
 	@field:SerializedName("publishedAt")
 	val publishedAt: String? = null,
@@ -27,4 +30,4 @@ data class Articles(
 
 	@field:SerializedName("content")
 	val content: String? = null
-)
+) : Parcelable

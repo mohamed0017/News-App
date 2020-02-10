@@ -1,44 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/d8"
-    android:layout_margin="@dimen/d4">
+    android:layout_margin="@dimen/d4"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/d8">
 
-    <TextView
-        android:id="@+id/newsItemTitle"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/black"
-        android:padding="@dimen/d4"
-        android:textSize="@dimen/item_title_size"/>
+        android:layout_weight="2">
 
-    <TextView
-        android:id="@+id/newsItemAuthor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/newsItemTitle"
-        android:layout_alignParentStart="true"
-        android:padding="@dimen/d4"
-        android:textSize="@dimen/item_author_size"/>
+        <TextView
+            android:id="@+id/newsItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/d4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_title_text_size"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/newsItemDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/newsItemAuthor"
-        android:layout_alignParentStart="true"
-        android:padding="@dimen/d4"
-        android:textSize="@dimen/item_date_size"/>
+        <TextView
+            android:id="@+id/newsItemAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsItemTitle"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/d4"
+            android:textSize="@dimen/item_author_text_size" />
+
+        <TextView
+            android:id="@+id/newsItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsItemAuthor"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/d4"
+            android:textSize="@dimen/item_date_text_size" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/newsItemImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d120"
+        android:layout_weight="1"
         android:padding="@dimen/d4"
         android:scaleType="fitCenter" />
-</RelativeLayout>
+</LinearLayout>

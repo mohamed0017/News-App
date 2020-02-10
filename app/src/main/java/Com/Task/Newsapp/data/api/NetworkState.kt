@@ -1,4 +1,4 @@
-package Com.Task.newsApp.api
+package Com.Task.newsApp.data.api
 
 enum class NetworkState {
     RUNNING,

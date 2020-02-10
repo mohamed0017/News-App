@@ -1,4 +1,4 @@
-package Com.Task.newsApp.Model
+package Com.Task.newsApp.data.Model
 
 import com.google.gson.annotations.SerializedName
 
@@ -8,7 +8,7 @@ data class News(
 	val totalResults: Int? = null,
 
 	@field:SerializedName("articles")
-	val articles: List<Articles?>? = null,
+	val articles: List<Article?>? = null,
 
 	@field:SerializedName("status")
 	val status: String? = null

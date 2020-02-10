@@ -1,9 +1,9 @@
 package Com.Task.newsApp.ui.news
 
-import Com.Task.newsApp.api.NetworkState
+import Com.Task.newsApp.data.api.NetworkState
 import Com.Task.newsApp.base.BaseViewModel
 import Com.Task.newsApp.datasource.NewsDataSourceFactory
-import Com.Task.newsApp.repository.NewsRepository
+import Com.Task.newsApp.data.repository.NewsRepository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import androidx.paging.LivePagedListBuilder
@@ -16,6 +16,11 @@ class NewsViewModel(newsRepository: NewsRepository) : BaseViewModel(){
     val news = LivePagedListBuilder(recipeDataSource, pagedListConfig()).build()
     val networkState: LiveData<NetworkState>? =
         Transformations.switchMap(recipeDataSource.source) { it.getNetworkState() }
+
+    fun loadInitialNews(){
+        if (news.value.isNullOrEmpty())
+            refreshAllList()
+    }
 
     fun refreshFailedRequest() =
         recipeDataSource.getSource()?.retryFailedQuery()

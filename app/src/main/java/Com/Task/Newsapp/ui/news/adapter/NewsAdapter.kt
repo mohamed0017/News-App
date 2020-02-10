@@ -1,8 +1,8 @@
 package Com.Task.newsApp.ui.news.adapter
 
-import Com.Task.newsApp.Model.Articles
+import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.R
-import Com.Task.newsApp.api.NetworkState
+import Com.Task.newsApp.data.api.NetworkState
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
 class NewsAdapter(private val listener: OnClickListener) :
-    PagedListAdapter<Articles, RecyclerView.ViewHolder>(diffCallback) {
+    PagedListAdapter<Article, RecyclerView.ViewHolder>(diffCallback) {
 
     private var currentNetworkState: NetworkState? = null
 
     interface OnClickListener {
         fun onRetryClick()
         fun whenListIsUpdated(size: Int, networkState: NetworkState?)
-        fun onRowClicked(url: Articles)
+        fun onRowClicked(url: Article)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -76,9 +76,9 @@ class NewsAdapter(private val listener: OnClickListener) :
     }
 
     companion object {
-        private val diffCallback = object : DiffUtil.ItemCallback<Articles>() {
-            override fun areItemsTheSame(oldItem: Articles, newItem: Articles): Boolean = oldItem == newItem
-            override fun areContentsTheSame(oldItem: Articles, newItem: Articles): Boolean = oldItem == newItem
+        private val diffCallback = object : DiffUtil.ItemCallback<Article>() {
+            override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean = oldItem == newItem
+            override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean = oldItem == newItem
         }
     }
 }

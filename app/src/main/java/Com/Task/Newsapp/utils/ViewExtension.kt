@@ -1,4 +1,4 @@
-package Com.Task.newsApp
+package Com.Task.newsApp.utils
 
 import android.view.View
 

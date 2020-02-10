@@ -5,5 +5,6 @@
     <string name="viewtype_creation_error">ViewType not declared</string>
     <string name="news_empty">No news found, try again …</string>
     <string name="load_data">Load data</string>
+    <string name="by">By :</string>
 
 </resources>

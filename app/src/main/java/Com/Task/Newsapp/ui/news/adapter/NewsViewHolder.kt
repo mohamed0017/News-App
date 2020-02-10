@@ -1,7 +1,7 @@
 package Com.Task.newsApp.ui.news.adapter
 
-import Com.Task.newsApp.ImageUtils
-import Com.Task.newsApp.Model.Articles
+import Com.Task.newsApp.utils.ImageUtils
+import Com.Task.newsApp.data.Model.Article
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.news_item.view.*
@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.news_item.view.*
 class NewsViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
     fun bind(
-        article: Articles?,
+        article: Article?,
         listener: NewsAdapter.OnClickListener
     ) {
         article?.let {
@@ -20,16 +20,16 @@ class NewsViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
     private fun setListeners(
         listener: NewsAdapter.OnClickListener,
-        article: Articles
+        article: Article
     ) {
         itemView.setOnClickListener {
             listener.onRowClicked(article)
         }
     }
 
-    private fun setupViews(it: Articles, itemView: View) {
+    private fun setupViews(it: Article, itemView: View) {
         it.urlToImage?.let { it1 ->
-            ImageUtils.loadImage(
+            ImageUtils.loadCircleImage(
                 it1,
                 itemView.newsItemImg,
                 itemView.context
@@ -38,7 +38,7 @@ class NewsViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
         it.title?.let { title -> itemView.newsItemTitle.text = title}
         it.author?.let { author -> itemView.newsItemAuthor.text = author}
-        it.publishedAt?.let { date -> itemView.newsItemDate.text = date}
+        it.publishedAt?.let { date -> itemView.newsItemDate.text = date.substringBefore("T")}
 
     }
 }

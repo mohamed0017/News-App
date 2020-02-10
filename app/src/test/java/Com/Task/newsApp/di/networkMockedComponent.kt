@@ -1,6 +1,6 @@
 package Com.Task.newsApp.di
 
-import Com.Task.newsApp.api.NewsService
+import Com.Task.newsApp.data.api.NewsService
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient

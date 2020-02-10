@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="new_list_padding">8dp</dimen>
-    <dimen name="item_title_size">16sp</dimen>
-    <dimen name="item_author_size">14sp</dimen>
-    <dimen name="item_date_size">12sp</dimen>
+    <dimen name="item_title_text_size">16sp</dimen>
+    <dimen name="item_author_text_size">14sp</dimen>
+    <dimen name="item_date_text_size">12sp</dimen>
     <dimen name="d8">8dp</dimen>
     <dimen name="d4">4dp</dimen>
+    <dimen name="d250">250dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="author_text_size">12sp</dimen>
+    <dimen name="date_text_size">12sp</dimen>
+    <dimen name="desc_text_size">14sp</dimen>
+    <dimen name="content_text_size">18sp</dimen>
+    <dimen name="d16">16dp</dimen>
+    <dimen name="d120">120dp</dimen>
 </resources>

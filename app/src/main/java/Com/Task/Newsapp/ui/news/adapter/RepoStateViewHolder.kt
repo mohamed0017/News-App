@@ -1,8 +1,8 @@
 package Com.Task.newsApp.ui.news.adapter
 
-import Com.Task.newsApp.api.NetworkState
-import Com.Task.newsApp.gone
-import Com.Task.newsApp.visible
+import Com.Task.newsApp.data.api.NetworkState
+import Com.Task.newsApp.utils.gone
+import Com.Task.newsApp.utils.visible
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_repo_state.view.*

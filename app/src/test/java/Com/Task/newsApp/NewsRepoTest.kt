@@ -4,7 +4,7 @@ import Com.Task.newsApp.base.BaseMockServerTest
 import Com.Task.newsApp.di.networkMockedComponent
 import Com.Task.newsApp.di.repoMockedModule
 import Com.Task.newsApp.di.viewModelModule
-import Com.Task.newsApp.repository.NewsRepository
+import Com.Task.newsApp.data.repository.NewsRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
