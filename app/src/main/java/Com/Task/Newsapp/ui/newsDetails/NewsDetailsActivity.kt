@@ -1,19 +1,19 @@
 package Com.Task.newsApp.ui.newsDetails
 
-import Com.Task.newsApp.utils.ImageUtils
-import Com.Task.newsApp.data.Model.Article
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import Com.Task.newsApp.R
+import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.ui.news.News_Details
+import Com.Task.newsApp.utils.ImageUtils
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_news_details.*
 
 class NewsDetailsActivity : AppCompatActivity() {
 
     companion object {
-        fun openNewsDetails(context: Context, article :Article ) {
+        fun openNewsDetails(context: Context, article: Article) {
             val intent = Intent(context, NewsDetailsActivity::class.java)
             intent.putExtra(News_Details, article)
             context.startActivity(intent)

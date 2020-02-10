@@ -1,7 +1,7 @@
 package Com.Task.newsApp.ui.news.adapter
 
-import Com.Task.newsApp.utils.ImageUtils
 import Com.Task.newsApp.data.Model.Article
+import Com.Task.newsApp.utils.ImageUtils
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.news_item.view.*
@@ -36,9 +36,9 @@ class NewsViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
             )
         }
 
-        it.title?.let { title -> itemView.newsItemTitle.text = title}
-        it.author?.let { author -> itemView.newsItemAuthor.text = author}
-        it.publishedAt?.let { date -> itemView.newsItemDate.text = date.substringBefore("T")}
+        it.title?.let { title -> itemView.newsItemTitle.text = title }
+        it.author?.let { author -> itemView.newsItemAuthor.text = author }
+        it.publishedAt?.let { date -> itemView.newsItemDate.text = date.substringBefore("T") }
 
     }
 }

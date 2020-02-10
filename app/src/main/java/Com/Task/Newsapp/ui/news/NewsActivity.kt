@@ -1,14 +1,14 @@
 package Com.Task.newsApp.ui.news
 
-import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.R
+import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.data.api.NetworkState
-import Com.Task.newsApp.utils.gone
 import Com.Task.newsApp.ui.news.adapter.NewsAdapter
 import Com.Task.newsApp.ui.newsDetails.NewsDetailsActivity
+import Com.Task.newsApp.utils.gone
 import Com.Task.newsApp.utils.visible
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_news.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

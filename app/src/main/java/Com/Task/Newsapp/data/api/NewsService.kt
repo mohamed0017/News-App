@@ -8,5 +8,5 @@ import retrofit2.http.QueryMap
 interface NewsService {
 
     @GET("/v2/everything")
-    fun getAllNewsAsync(@QueryMap parameters : HashMap<String, String>): Deferred<News>
+    fun getAllNewsAsync(@QueryMap parameters: HashMap<String, String>): Deferred<News>
 }

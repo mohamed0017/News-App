@@ -1,7 +1,7 @@
 package Com.Task.newsApp.ui.news.adapter
 
-import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.R
+import Com.Task.newsApp.data.Model.Article
 import Com.Task.newsApp.data.api.NetworkState
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -32,7 +32,10 @@ class NewsAdapter(private val listener: OnClickListener) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (getItemViewType(position)) {
             R.layout.news_item -> (holder as NewsViewHolder).bind(getItem(position), listener)
-            R.layout.item_repo_state -> (holder as RepoStateViewHolder).bind(currentNetworkState, listener)
+            R.layout.item_repo_state -> (holder as RepoStateViewHolder).bind(
+                currentNetworkState,
+                listener
+            )
         }
     }
 
@@ -49,7 +52,8 @@ class NewsAdapter(private val listener: OnClickListener) :
         return super.getItemCount()
     }
 
-    private fun hasExtraRow() = currentNetworkState != null && currentNetworkState != NetworkState.SUCCESS
+    private fun hasExtraRow() =
+        currentNetworkState != null && currentNetworkState != NetworkState.SUCCESS
 
     fun updateNetworkState(newNetworkState: NetworkState?) {
         val currentNetworkState = this.currentNetworkState
@@ -77,8 +81,11 @@ class NewsAdapter(private val listener: OnClickListener) :
 
     companion object {
         private val diffCallback = object : DiffUtil.ItemCallback<Article>() {
-            override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean = oldItem == newItem
-            override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean = oldItem == newItem
+            override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean =
+                oldItem == newItem
+
+            override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean =
+                oldItem == newItem
         }
     }
 }

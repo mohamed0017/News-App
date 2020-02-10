@@ -17,7 +17,10 @@ class NewsDataSource(
     private val networkState = MutableLiveData<NetworkState>()
     private var retryQuery: (() -> Any)? = null //Keep the last query just in case it fails
 
-    override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, Article>) {
+    override fun loadInitial(
+        params: LoadInitialParams<Int>,
+        callback: LoadInitialCallback<Int, Article>
+    ) {
         retryQuery = { loadInitial(params, callback) }
         getNews(1) {
             callback.onResult(it, null, 2)
@@ -49,8 +52,8 @@ class NewsDataSource(
         }
     }
 
-    private fun getParameters(page: Int) : HashMap<String,String> {
-        val parameters = HashMap<String,String>()
+    private fun getParameters(page: Int): HashMap<String, String> {
+        val parameters = HashMap<String, String>()
         parameters["page"] = "$page"
         parameters["pageSize"] = "10"
         parameters["q"] = "all"
